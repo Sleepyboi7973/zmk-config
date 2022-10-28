@@ -1,7 +1,7 @@
 /*
- * Copyright (c) 2020 The ZMK Contributors
+ * copyright (c) 2020 the zmk contributors
  *
- * SPDX-License-Identifier: MIT
+ * spdx-license-identifier: mit
  */
 
 #include <behaviors.dtsi>
@@ -15,55 +15,55 @@
 
                 default_layer {
 // -------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |   BKSP    |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |    '      |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT(RET) |
-//                         | ALT | LWR | SPC | RSE  | ALT |
+// |  tab |  q  |  w  |  e  |  r  |  t  |   |  y  |  u   |  i  |  o  |  p  |   bksp    |
+// | ctrl |  a  |  s  |  d  |  f  |  g  |   |  h  |  j   |  k  |  l  |  ;  |    '      |
+// | shft |  z  |  x  |  c  |  v  |  b  |   |  n  |  m   |  ,  |  .  |  /  | shft(ret) |
+//                         | alt | lwr | spc | rse  | alt |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt RSHFT RET
-                        &kp LALT  &mo 1 &kp SPACE &mo 2  &kp RALT
+   &kp tab   &kp q &kp w &kp e &kp r &kp t   &kp y &kp u  &kp i     &kp o   &kp p    &kp bspc
+   &kp lshft &kp a &kp s &kp d &kp f &kp g   &kp h &kp j  &kp k     &kp l   &kp semi &kp sqt
+   &kp lctrl &kp z &kp x &kp c &kp v &kp b   &kp n &kp m  &kp comma &kp dot &kp fslh &mt rshft ret
+                        &mo 1  &kp enter &kp space &kp bspc  &mo 2
                         >;
                 };
 
                 lower_layer {
 // ----------------------------------------------------------------------------------
-// |    |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |    DEL    |
-// |    |  _  |  +  |  {  |  }  | "|" |   | LFT | DWN |  UP | RGT |  `  |     ~     |
-// |    | ESC | GUI | ALT | CAPS|  "  |   | HOME| END | PGUP| PGDN| PRSC| SHFT(RET) |
-//                       |     |     | RET | ADJ |     |
+// |    |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |    del    |
+// |    |  _  |  +  |  {  |  }  | "|" |   | lft | dwn |  up | rgt |  `  |     ~     |
+// |    | esc | gui | alt | caps|  "  |   | home| end | pgup| pgdn| prsc| shft(ret) |
+//                       |     |     | ret | adj |     |
                         bindings = <
-   &trans &kp EXCL  &kp AT      &kp HASH &kp DLLR &kp PRCNT      &kp CARET &kp AMPS &kp N8    &kp LPAR  &kp RPAR  &kp DEL
-   &trans &kp MINUS &kp KP_PLUS &kp LBRC &kp RBRC &kp PIPE       &kp LEFT  &kp DOWN &kp UP    &kp RIGHT &kp GRAVE &kp TILDE
-   &trans &kp ESC   &kp LGUI    &kp LALT &kp CLCK &kp DQT        &kp HOME  &kp END  &kp PG_UP &kp PG_DN &kp PSCRN &mt RSHFT RET
-                                 &trans      &trans       &kp RET        &mo 3       &trans
+   &kp esc &kp n1   &kp n2    &kp n3    &kp n4    &kp n5         &kp n6    &kp n7    &kp n8    &kp n9    &kp n0    &trans
+   &trans &kp C_VOLUME_DOWN    &kp C_PREV   &kp C_NEXT   &kp C_VOLUME_UP    &kp C_PLAY        &trans    &kp left  &kp up    &kp down  &kp right &trans
+   &trans &trans    &trans    &trans    &trans    &trans         &trans    &trans    &trans    &trans    rans    &trans 
+                                 &trans      &trans       &trans      &kp DELETE     &kp LGUI
                         >;
                 };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |    |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL |
-// |    |  -  |  =  |  [  |  ]  |  \  |   | F1  | F2  | F3  | F4  | F5  | F6  |
-// |    | ESC | GUI | ALT | CAPS|  "  |   | F7  | F8  | F9  | F10 | F11 | F12 |
-//                       |     | ADJ | BKSP |    |     |
+// |    |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | del |
+// |    |  -  |  =  |  [  |  ]  |  \  |   | f1  | f2  | f3  | f4  | f5  | f6  |
+// |    | esc | gui | alt | caps|  "  |   | f7  | f8  | f9  | f10 | f11 | f12 |
+//                       |     | adj | bksp |    |     |
                         bindings = <
-   &trans &kp N1    &kp N2    &kp N3    &kp N4    &kp N5        &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp DEL
-   &trans &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT  &kp BSLH      &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6
-   &trans &kp ESC   &kp LGUI  &kp RALT  &kp CLCK  &kp DQT       &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
-                                &trans      &mo 3       &kp BSPC        &trans      &trans
+   &kp GRAVE &kp f1    &kp f2    &kp f3    &kp f4    &kp f5        &kp f6    &kp f7    &kp f8    &kp f9    &kp f10    &trans
+   &trans &trans    &trans    &trans    &kp PSCRN    &trans        &trans    &kp PLUS  &KP MINUS &trans    &trans     &trans
+   &trans &trans    &trans    &trans    &trans       &trans        &trans    &trans    &trans    &trans    &trans     &trans
+                                &trans      &trans       &trans      &trans       &trans
                         >;
                 };
 
                 adjust_layer {
 // -----------------------------------------------------------------------------------------
-// | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ |    | RGB TOG |   |  BT1  | BT2 | BT3 | BT4 | BT5 | BT CLR |
-// | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI- |    |         |   |       |     |     |     |     |        |
-// |          |          |          |          |    |         |   | RESET |     |     |     |     |        |
+// | rgb bri+ | rgb sat+ | rgb hue+ | rgb ani+ |    | rgb tog |   |  bt1  | bt2 | bt3 | bt4 | bt5 | bt clr |
+// | rgb bri- | rgb sat- | rgb hue- | rgb ani- |    |         |   |       |     |     |     |     |        |
+// |          |          |          |          |    |         |   | reset |     |     |     |     |        |
 //                                              |     |     |     |     |     |
                         bindings = <
-   &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF &none &rgb_ug RGB_TOG    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
-   &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &none &none              &none        &none        &none        &none        &none        &none
+   &rgb_ug rgb_bri &rgb_ug rgb_sai &rgb_ug rgb_hui &rgb_ug rgb_eff &none &rgb_ug rgb_tog    &bt bt_sel 0 &bt bt_sel 1 &bt bt_sel 2 &bt bt_sel 3 &bt bt_sel 4 &bt bt_clr
+   &rgb_ug rgb_brd &rgb_ug rgb_sad &rgb_ug rgb_hud &rgb_ug rgb_efr &none &none              &none        &none        &none        &none        &none        &none
    &none           &none           &none           &none           &none &none              &reset       &none        &none        &none        &none        &none
                                                              &trans      &trans       &tog 3        &trans      &trans
                         >;
