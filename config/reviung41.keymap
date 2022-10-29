@@ -55,18 +55,5 @@
                         >;
                 };
 
-                adjust_layer {
-// -----------------------------------------------------------------------------------------
-// | rgb bri+ | rgb sat+ | rgb hue+ | rgb ani+ |    | rgb tog |   |  bt1  | bt2 | bt3 | bt4 | bt5 | bt clr |
-// | rgb bri- | rgb sat- | rgb hue- | rgb ani- |    |         |   |       |     |     |     |     |        |
-// |          |          |          |          |    |         |   | reset |     |     |     |     |        |
-//                                              |     |     |     |     |     |
-                        bindings = <
-   &rgb_ug rgb_bri &rgb_ug rgb_sai &rgb_ug rgb_hui &rgb_ug rgb_eff &none &rgb_ug rgb_tog    &bt bt_sel 0 &bt bt_sel 1 &bt bt_sel 2 &bt bt_sel 3 &bt bt_sel 4 &bt bt_clr
-   &rgb_ug rgb_brd &rgb_ug rgb_sad &rgb_ug rgb_hud &rgb_ug rgb_efr &none &none              &none        &none        &none        &none        &none        &none
-   &none           &none           &none           &none           &none &none              &reset       &none        &none        &none        &none        &none
-                                                             &trans      &trans       &tog 3        &trans      &trans
-                        >;
-                };
         };
 };
