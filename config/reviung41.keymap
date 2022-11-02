@@ -5,14 +5,30 @@
    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 Wednesday 2nd Nov - Fri 2nd Dec
  
    SPDX-License-Identifier: MIT
+   
+   
+   cd home/tjenkins/zmk-config
+   git add -A
+   git commit -m 'Tapdance 1'
+   git push
+   
+   
+   
+   
  */
+
+
+
+
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 
-/ behaviors {
+/ {
+
+ behaviors {
        td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
@@ -28,6 +44,8 @@
             tapping-term-ms = <200>;
             bindings = <&kp LALT>, <&kp RET>;
         };
+        
+    };
 };
 
 &mt {
